@@ -31,5 +31,5 @@ jobs:
         binary_name: "caddy"
         pre_command: "go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest"
         build_command: "xcaddy build"
-        build_flags: "--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive –overwrite"
+        build_flags: "--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive --overwrite"
         extra_files: README.md
