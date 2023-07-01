@@ -28,9 +28,8 @@ jobs:
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
         goversion: 1.20.5
-        project_path: "~/"
         binary_name: "caddy"
         pre_command: "go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest"
-        build_command: "~/go/bin/xcaddy build"
+        build_command: "xcaddy build"
         build_flags: "--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive"
         extra_files: README.md
