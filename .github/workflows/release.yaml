@@ -27,6 +27,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
+        goversion: 1.18
         project_path: "~/"
         binary_name: "caddy"
         pre_command: "go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest"
