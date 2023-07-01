@@ -22,7 +22,7 @@ jobs:
             goos: windows
     steps:
     - uses: actions/checkout@v3
-    - uses: wangyoucao577/go-release-action@v1
+    - uses: nexply/go-release-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
@@ -31,5 +31,5 @@ jobs:
         binary_name: "caddy"
         pre_command: "go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest"
         build_command: "xcaddy build"
-        build_flags: "-v ${INPUT_RELEASE_TAG} --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive"
+        build_flags: "--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive"
         extra_files: README.md
