@@ -31,7 +31,7 @@ jobs:
         binary_name: "caddy"
         pre_command: "go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest"
         build_command: "xcaddy build"
-        build_flags: "--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive  --with github.com/mholt/caddy-webdav  --with github.com/caddy-dns/cloudflare  --with github.com/caddy-dns/route53"
+        build_flags: "--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive  --with github.com/mholt/caddy-webdav  --with github.com/caddy-dns/cloudflare"
         extra_files: README.md
         retry: 10
  
