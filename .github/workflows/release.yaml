@@ -30,8 +30,8 @@ jobs:
         goversion: 1.22.3
         binary_name: "caddy"
         pre_command: "go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest"
-        build_command: "xcaddy build"
-        build_flags: "--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive  --with github.com/mholt/caddy-webdav  --with github.com/caddy-dns/cloudflare"
+        build_command: "xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive  --with github.com/mholt/caddy-webdav  --with github.com/caddy-dns/cloudflare"
+        # build_flags: "--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive  --with github.com/mholt/caddy-webdav  --with github.com/caddy-dns/cloudflare"
         extra_files: README.md
         retry: 10
  
